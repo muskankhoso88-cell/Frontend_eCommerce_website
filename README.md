@@ -17,14 +17,9 @@ A fully responsive eCommerce frontend website inspired by Alibaba, built during 
 
 ## 📸 Screenshots
 
-### 🏠 Home Page
-![Home Page](screenshots/home-page.png)
-
-### 🛍️ Product Listing Page
-![Product Listing](screenshots/product-listing.png)
-
-### 📦 Product Detail Page
-![Product Detail](screenshots/product-detail.png)
+![Home Page](home-page.png)
+![Product Listing](product-listing.png)
+![Product Detail](product-detail.png)
 
 ---
 
