@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products – Brand Marketplace</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="product.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <img src="assets/Layout/Brand/logo-colored.png" alt="logo">
+      <a href="index.html"></a>
+    </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search" id="searchInput" />
+      <div class="category-dropdown">
+        <span>All category</span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <button class="search-btn">Search</button>
+    </div>
+    <div class="header-icons">
+      <div class="icon-item">
+        <i class="fa-regular fa-user"></i>
+        <span>Profile</span>
+      </div>
+      <div class="icon-item">
+        <i class="fa-regular fa-message"></i>
+        <span>Message</span>
+      </div>
+      <div class="icon-item">
+        <i class="fa-regular fa-heart"></i>
+        <span>Orders</span>
+      </div>
+      <div class="icon-item">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>My cart</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <div class="all-category">
+        <i class="fa-solid fa-bars"></i>
+        <span>All category</span>
+      </div>
+      <a href="index.html" class="nav-link">Hot offers</a>
+      <a href="index.html" class="nav-link">Gift boxes</a>
+      <a href="index.html" class="nav-link">Projects</a>
+      <a href="product.html" class="nav-link active-nav">Products</a>
+      <a href="index.html" class="nav-link">Menu item</a>
+    </div>
+    <div class="nav-right">
+         <div class="nav-dropdown">
+        <span>Help </span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="nav-dropdown">
+        
+        <span>English USD </span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+      <div class="nav-dropdown">
+        <span>🇩🇪 Ship to <img src="assets/Layout1/Image/flags/DE@2x.png" alt=""></span>
+        <i class="fa-solid fa-chevron-down"></i>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <div class="breadcrumb">
+    <a href="index.html">Home</a>
+    <i class="fa-solid fa-chevron-right"></i>
+    <span>All Products</span>
+  </div>
+
+  <!-- PAGE LAYOUT -->
+  <div class="pl-layout">
+
+    <!-- FILTERS SIDEBAR -->
+    <aside class="pl-sidebar">
+      <div class="filter-group">
+        <h4>Category</h4>
+        <ul class="filter-list">
+          <li><label><input type="radio" name="category" checked /> All</label></li>
+          <li><label><input type="radio" name="category" /> Electronics</label></li>
+          <li><label><input type="radio" name="category" /> Clothing</label></li>
+          <li><label><input type="radio" name="category" /> Home & Garden</label></li>
+          <li><label><input type="radio" name="category" /> Sports</label></li>
+          <li><label><input type="radio" name="category" /> Toys</label></li>
+          <li><label><input type="radio" name="category" /> Automotive</label></li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h4>Price Range</h4>
+        <div class="price-inputs">
+          <input type="number" placeholder="$ Min" class="price-input" />
+          <span>—</span>
+          <input type="number" placeholder="$ Max" class="price-input" />
+        </div>
+        <button class="apply-btn">Apply</button>
+      </div>
+      <div class="filter-group">
+        <h4>Rating</h4>
+        <ul class="filter-list">
+          <li><label><input type="radio" name="rating" /> <span class="stars-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span> & up</label></li>
+          <li><label><input type="radio" name="rating" /> <span class="stars-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span> & up</label></li>
+          <li><label><input type="radio" name="rating" checked /> <span class="stars-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span> & up</label></li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h4>Condition</h4>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" checked /> Any</label></li>
+          <li><label><input type="checkbox" /> Refurbished</label></li>
+          <li><label><input type="checkbox" /> Brand new</label></li>
+          <li><label><input type="checkbox" /> Old items</label></li>
+        </ul>
+      </div>
+      <div class="filter-group">
+        <h4>Brands</h4>
+        <ul class="filter-list">
+          <li><label><input type="checkbox" /> Samsung</label></li>
+          <li><label><input type="checkbox" /> Apple</label></li>
+          <li><label><input type="checkbox" /> Sony</label></li>
+          <li><label><input type="checkbox" checked /> Huawei</label></li>
+          <li><label><input type="checkbox" /> Lenovo</label></li>
+          <li><label><input type="checkbox" /> Xiaomi</label></li>
+        </ul>
+      </div>
+      <button class="clear-btn">Clear all filters</button>
+    </aside>
+
+    <!-- PRODUCTS AREA -->
+    <div class="pl-content">
+
+      <!-- TOP BAR -->
+      <div class="pl-topbar">
+        <p class="results-count"><span id="resultCount">12</span> items found for <strong>"Electronics"</strong></p>
+        <div class="topbar-right">
+          <div class="sort-wrap">
+            <label>Sort by:</label>
+            <select id="sortSelect">
+              <option>Featured</option>
+              <option>Price: Low to High</option>
+              <option>Price: High to Low</option>
+              <option>Newest</option>
+              <option>Best Rating</option>
+            </select>
+          </div>
+          <div class="view-toggle">
+            <button class="view-btn active" id="gridViewBtn" title="Grid view"><i class="fa-solid fa-grip"></i></button>
+            <button class="view-btn" id="listViewBtn" title="List view"><i class="fa-solid fa-list"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRODUCT GRID -->
+      <div class="pl-grid" id="productGrid">
+
+        <a href="product-detail.html" class="pl-card">
+          <div class="pl-img-wrap">
+            <img src="assets/Image/tech/8.png" alt="Smart Watch" />
+            <button class="pl-wish" onclick="event.preventDefault()"><i class="fa-regular fa-heart"></i></button>
+            <span class="pl-badge badge-new">NEW</span>
+          </div>
+          <div class="pl-info">
+            <p class="pl-category">Wearables</p>
+            <p class="pl-name">Smart Watch Series 6</p>
+            <div class="pl-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>(128)</span></div>
+            <div class="pl-bottom">
+              <div class="pl-prices"><span class="pl-price">$120.00</span><span class="pl-old">$150.00</span></div>
+              <button class="pl-buy-btn" onclick="event.preventDefault()">Buy Now</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product-detail.html" class="pl-card">
+          <div class="pl-img-wrap">
+            <img src="assets/Image/tech/image 34.png" alt="Laptop" />
+            <button class="pl-wish" onclick="event.preventDefault()"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="pl-info">
+            <p class="pl-category">Computers</p>
+            <p class="pl-name">Laptop Pro 14-inch</p>
+            <div class="pl-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(204)</span></div>
+            <div class="pl-bottom">
+              <div class="pl-prices"><span class="pl-price">$1,099.00</span></div>
+              <button class="pl-buy-btn" onclick="event.preventDefault()">Buy Now</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product-detail.html" class="pl-card">
+          <div class="pl-img-wrap">
+            <img src="assets/Image/tech/image 29.png" alt="Headphones" />
+            <button class="pl-wish" onclick="event.preventDefault()"><i class="fa-regular fa-heart"></i></button>
+            <span class="pl-badge badge-sale">20%</span>
+          </div>
+          <div class="pl-info">
+            <p class="pl-category">Audio</p>
+            <p class="pl-name">Wireless Headphones Pro</p>
+            <div class="pl-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>(87)</span></div>
+            <div class="pl-bottom">
+              <div class="pl-prices"><span class="pl-price">$49.00</span><span class="pl-old">$62.00</span></div>
+              <button class="pl-buy-btn" onclick="event.preventDefault()">Buy Now</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product-detail.html" class="pl-card">
+          <div class="pl-img-wrap">
+            <img src="assets/Image/tech/6.png" alt="Camera" />
+            <button class="pl-wish" onclick="event.preventDefault()"><i class="fa-regular fa-heart"></i></button>
+          </div>
+          <div class="pl-info">
+            <p class="pl-category">Photography</p>
+            <p class="pl-name">DSLR Camera 4K Ultra</p>
+            <div class="pl-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(311)</span></div>
+            <div class="pl-bottom">
+              <div class="pl-prices"><span class="pl-price">$749.00</span></div>
+              <button class="pl-buy-btn" onclick="event.preventDefault()">Buy Now</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product-detail.html" class="pl-card">
+          <div class="pl-img-wrap">
+            <img src="assets/Image/tech/image 85.png" alt="Tea maker" />
+            <button class="pl-wish" onclick="event.preventDefault()"><i class="fa-regular fa-heart"></i></button>
+            <span class="pl-badge badge-sale">15%</span>
+          </div>
+          <div class="pl-info">
+            <p class="pl-category">Electronic</p>
+            <p class="pl-name">Tea maker</p>
+            <div class="pl-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><span>(45)</span></div>
+            <div class="pl-bottom">
+              <div class="pl-prices"><span class="pl-price">$35.00</span><span class="pl-old">$41.00</span></div>
+              <button class="pl-buy-btn" onclick="event.preventDefault()">Buy Now</button>
+            </div>
+          </div>
+        </a>
+
+        <a href="product-detail.html" class="pl-card">
+          <div class="pl-img-wrap">
+            <img src="assets/Image/tech/image 32.png" alt="Tablet" />
+            <button class="pl-wish" onclick="event.preventDefault()"><i class="fa-regular fa-heart"></i></button>
+            <span class="pl-badge badge-new">NEW</span>
+          </div>
+          <div class="pl-info">
+            <p class="pl-category">Tablets</p>
+            <p class="pl-name">Tablet 10" HD Display</p>
+            <div class="pl-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>(97)</span></div>
+            <div class="pl-bottom">
+              <div class="pl-prices"><span class="pl-price">$319.00</span></div>
+              <button class="pl-buy-btn" onclick="event.preventDefault()">Buy Now</button>
+            </div>
+          </div>
+        </a>
+
+        
+
+        <a href="product-detail.html" class="pl-card">
+          <div class="pl-img-wrap">
+            <img src="assets/Image/tech/image 33.png" alt="Phone" />
+            <button class="pl-wish" onclick="event.preventDefault()"><i class="fa-regular fa-heart"></i></button>
+            <span class="pl-badge badge-sale">10%</span>
+          </div>
+          <div class="pl-info">
+            <p class="pl-category">Phones</p>
+            <p class="pl-name">Smartphone X200 Pro</p>
+            <div class="pl-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><span>(504)</span></div>
+            <div class="pl-bottom">
+              <div class="pl-prices"><span class="pl-price">$539.00</span><span class="pl-old">$599.00</span></div>
+              <button class="pl-buy-btn" onclick="event.preventDefault()">Buy Now</button>
+            </div>
+          </div>
+        </a>
+
+       
+        
+
+        <a href="product-detail.html" class="pl-card">
+          <div class="pl-img-wrap">
+            <img src="assets/Image/tech/image 86.png" alt="Earbuds" />
+            <button class="pl-wish" onclick="event.preventDefault()"><i class="fa-regular fa-heart"></i></button>
+            <span class="pl-badge badge-sale">30%</span>
+          </div>
+          <div class="pl-info">
+            <p class="pl-category">Audio</p>
+            <p class="pl-name">True Wireless Earbuds</p>
+            <div class="pl-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span>(388)</span></div>
+            <div class="pl-bottom">
+              <div class="pl-prices"><span class="pl-price">$28.00</span><span class="pl-old">$40.00</span></div>
+              <button class="pl-buy-btn" onclick="event.preventDefault()">Buy Now</button>
+            </div>
+          </div>
+        </a>
+       
+
+      </div><!-- end pl-grid -->
+
+      <!-- PAGINATION -->
+      <div class="pagination" id="pagination">
+        <button class="page-btn prev-btn" id="prevBtn" disabled>
+          <i class="fa-solid fa-chevron-left"></i> Previous
+        </button>
+        <div class="page-numbers">
+          <button class="page-num active">1</button>
+          <button class="page-num">2</button>
+          <button class="page-num">3</button>
+          <span class="page-ellipsis">...</span>
+          <button class="page-num">12</button>
+        </div>
+        <button class="page-btn next-btn" id="nextBtn">
+          Next <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- LOAD MORE -->
+      <div class="load-more-wrap">
+        <button class="load-more-btn" id="loadMoreBtn">
+          <i class="fa-solid fa-rotate-right"></i> Load more products
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col brand-col">
+        <div class="footer-logo">
+         <img src="assets/Layout/Brand/logo-colored.png" alt="logo">
+
+        </div>
+        <p class="footer-desc">Best information about the company goes here but now lorem ipsum is</p>
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>About</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Find store</a></li><li><a href="#">Categories</a></li><li><a href="#">Blogs</a></li></ul></div>
+      <div class="footer-col"><h4>Partnership</h4><ul><li><a href="#">About Us</a></li><li><a href="#">Find store</a></li><li><a href="#">Categories</a></li><li><a href="#">Blogs</a></li></ul></div>
+      <div class="footer-col"><h4>Information</h4><ul><li><a href="#">Help Center</a></li><li><a href="#">Money Refund</a></li><li><a href="#">Shipping Info</a></li><li><a href="#">Refunds</a></li></ul></div>
+      <div class="footer-col"><h4>For users</h4><ul><li><a href="#">Login</a></li><li><a href="#">Register</a></li><li><a href="#">Settings</a></li><li><a href="#">My Orders</a></li></ul></div>
+      <div class="footer-col">
+        <h4>Get app</h4>
+        <div class="app-buttons">
+          <a href="#" class="app-btn"><i class="fa-brands fa-apple"></i><div><small>Download on the</small><strong>App Store</strong></div></a>
+          <a href="#" class="app-btn"><i class="fa-brands fa-google-play"></i><div><small>Get it on</small><strong>Google Play</strong></div></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Brand. All rights reserved.</p>
+      <div class="payment-icons">
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-paypal"></i>
+        <i class="fa-brands fa-cc-amex"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+</body>
+</html>
